@@ -1,5 +1,6 @@
-exports.seed = async function (knex) {
-  // Deletes ALL existing entries
-  await knex('recipes').truncate()
-  await knex('recipes').insert([{ recipe_name: 'Veg curry' }])
+exports.seed = function (knex) {
+  return knex('recipes').insert([
+    { recipe_name: 'fried noodle' },
+    { recipe_name: 'homemade pizza' },
+  ])
 }
